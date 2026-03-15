@@ -3,10 +3,10 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-14 py-5 bg-bg border-b border-border">
       <a href="#" className="font-syne font-extrabold text-accent text-lg">AW</a>
       <ul className="flex gap-8 list-none">
-        {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
+        {["About", "Skills", "Experience", "Projects", "Ask Alex", "Contact"].map((item) => (
           <li key={item}>
             <a
-              href={`#${item.toLowerCase()}`}
+              href={`#${item.toLowerCase().replace(" ", "-")}`}
               className="relative font-mono text-muted text-xs tracking-widest uppercase transition-colors duration-200 hover:text-accent group"
             >
               {item}
