@@ -1,26 +1,54 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeUp, stagger } from "@/utils/motion";
+
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-14 max-w-6xl mx-auto">
+    <section className="relative min-h-screen flex flex-col justify-center px-14 max-w-6xl mx-auto">
 
-      <h1
-        className="font-syne font-extrabold text-bright leading-none tracking-tighter mb-5"
-        style={{ fontSize: "clamp(3.6rem, 9vw, 7.5rem)" }}
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        animate="show"
       >
-        Alexander
-        <br />
-        <span className="text-accent">Wells.</span>
-      </h1>
+        <motion.h1
+          variants={fadeUp}
+          className="font-syne font-extrabold text-bright leading-none tracking-tighter mb-5"
+          style={{ fontSize: "clamp(3.6rem, 9vw, 7.5rem)" }}
+        >
+          Alexander
+          <br />
+          <span className="text-accent">Wells.</span>
+        </motion.h1>
 
-      <p className="font-mono text-muted text-sm tracking-widest mb-8">
-        // Software Engineer · Focused on AI & ML
-      </p>
+        <motion.p
+          variants={fadeUp}
+          className="font-mono text-muted text-sm tracking-widest mb-8"
+        >
+          // Software Engineer · Focused on AI & ML
+        </motion.p>
 
-      <p className="text-muted text-lg leading-relaxed max-w-lg mb-12">
-        Building AI-driven solutions at the intersection of backend engineering,
-        data pipelines, and applied machine learning. Based in NZ, seeking roles
-        in Australia.
-      </p>
-      
+        <motion.p
+          variants={fadeUp}
+          className="text-muted text-lg leading-relaxed max-w-lg mb-12"
+        >
+          Building AI-driven solutions at the intersection of backend engineering,
+          data pipelines, and applied machine learning. Based in NZ, seeking roles
+          in Australia.
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-10 left-14 flex items-center gap-3 text-muted font-mono text-xs tracking-widest uppercase"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 0.6 }}
+      >
+        <div className="w-10 h-px bg-muted" />
+        Scroll to explore
+      </motion.div>
+
     </section>
   );
 }

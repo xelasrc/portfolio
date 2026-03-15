@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 const projects = [
   {
     title: "AI Interview Simulator",
@@ -25,20 +27,25 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="max-w-6xl mx-auto px-14 py-24 border-t border-border">
-      <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-10">Things I've built</h2>
+      <Reveal>
+        <p className="font-mono text-accent text-xs tracking-widest mb-2">// 04. Projects</p>
+        <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-10">Things I've built</h2>
+      </Reveal>
       <div className="grid grid-cols-3 gap-5">
-        {projects.map((p) => (
-          <div key={p.title} className="bg-surface border border-border p-6 flex flex-col gap-3">
-            <p className="font-mono text-accent text-xs tracking-widest">{p.status}</p>
-            <h3 className="font-syne font-bold text-bright text-lg">{p.title}</h3>
-            <p className="text-muted text-sm leading-relaxed flex-1">{p.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {p.stack.map((tag) => (
-                <span key={tag} className="px-2 py-1 border border-border text-accent font-mono text-xs">{tag}</span>
-              ))}
+        {projects.map((p, i) => (
+          <Reveal key={p.title} delay={i * 0.15}>
+            <div className="bg-surface border border-border p-6 flex flex-col gap-3 h-full">
+              <p className="font-mono text-accent text-xs tracking-widest">{p.status}</p>
+              <h3 className="font-syne font-bold text-bright text-lg">{p.title}</h3>
+              <p className="text-muted text-sm leading-relaxed flex-1">{p.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {p.stack.map((tag) => (
+                  <span key={tag} className="px-2 py-1 border border-border text-accent font-mono text-xs">{tag}</span>
+                ))}
+              </div>
+              <a href={p.github} className="text-muted text-sm hover:text-accent transition-colors">GitHub ↗</a>
             </div>
-            <a href={p.github} className="text-muted text-sm hover:text-accent transition-colors">GitHub ↗</a>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>
