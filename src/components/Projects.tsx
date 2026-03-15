@@ -29,22 +29,21 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-14 py-24 border-t border-border">
+    <section id="projects" className="max-w-6xl mx-auto px-6 md:px-14 py-24 border-t border-border">
       <Reveal>
         <p className="font-mono text-accent text-xs tracking-widest mb-2">// 04. Projects</p>
-        <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-10">Things I've built</h2>
+        <h2 className="font-syne font-bold text-bright text-3xl md:text-4xl tracking-tight mb-10">Things I've built</h2>
       </Reveal>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {projects.map((p, i) => (
           <Reveal key={p.title} delay={i * 0.15}>
             <motion.div
               className="relative bg-surface border border-border p-6 flex flex-col gap-3 h-full overflow-hidden"
-              whileHover={{ y: -6, borderColor: "rgba(251,146,60,0.5)" }}
+              whileHover={{ y: -6, borderColor: "rgba(249,115,22,0.35)" }}
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
-              {/* top accent line */}
               <motion.div
-                className="absolute top-0 left-0 right-0 h-px bg-orange-400"
+                className="absolute top-0 left-0 right-0 h-px bg-accent"
                 initial={{ scaleX: 0, transformOrigin: "left" }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}

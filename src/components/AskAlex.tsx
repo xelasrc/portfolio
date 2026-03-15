@@ -66,7 +66,7 @@ export default function AskAlex() {
   }
 
   return (
-    <section id="ask-alex" className="max-w-6xl mx-auto px-14 py-24 border-t border-border">
+    <section id="ask-alex" className="max-w-6xl mx-auto px-6 md:px-14 py-24 border-t border-border">
       <Reveal>
         <p className="font-mono text-accent text-xs tracking-widest mb-2">// 05. Ask Alex</p>
         <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-3">Ask Alex anything</h2>
