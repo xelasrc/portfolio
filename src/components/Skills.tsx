@@ -19,11 +19,16 @@ export default function Skills() {
       <div className="grid grid-cols-3 gap-5">
         {skills.map((cat, i) => (
           <Reveal key={cat.category} delay={i * 0.1}>
-            <div className="bg-surface border border-border p-6 h-full">
+            <div className="bg-surface border border-border p-6 h-full transition-colors duration-300 hover:border-accent/30">
               <p className="font-mono text-accent text-xs tracking-widest uppercase mb-4">{cat.category}</p>
               <div className="flex flex-wrap gap-2">
                 {cat.items.map((item) => (
-                  <span key={item} className="px-3 py-1 border border-border text-text text-sm">{item}</span>
+                  <span
+                    key={item}
+                    className="px-3 py-1 border border-border text-muted text-sm"
+                  >
+                    {item}
+                  </span>
                 ))}
               </div>
             </div>
