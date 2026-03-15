@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   description:
     "Graduate software engineer specialising in AI, backend development and data engineering. Based in NZ, seeking roles in Australia.",
   metadataBase: new URL("https://alexanderwells.dev"),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Alexander Wells — Software Engineer",
     description:
