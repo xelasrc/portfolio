@@ -21,9 +21,17 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alexander Wells - Software Engineer",
+  title: "Alexander Wells — Software Engineer",
   description:
     "Graduate software engineer specialising in AI, backend development and data engineering. Based in NZ, seeking roles in Australia.",
+  metadataBase: new URL("https://alexanderwells.dev"),
+  openGraph: {
+    title: "Alexander Wells — Software Engineer",
+    description:
+      "Graduate software engineer specialising in AI, backend development and data engineering. Based in NZ, seeking roles in Australia.",
+    url: "https://alexanderwells.dev",
+    siteName: "Alexander Wells",
+  },
 };
 
 export default function RootLayout({
