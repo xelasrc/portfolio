@@ -10,7 +10,7 @@ export default function Hero() {
         <motion.h1
           variants={fadeUp}
           className="font-syne font-extrabold text-bright leading-none tracking-tighter mb-5"
-          style={{ fontSize: "clamp(3rem, 9vw, 7.5rem)" }}
+          style={{ fontSize: "clamp(2rem, 9vw, 7.5rem)" }}
         >
           Alexander
           <br />
