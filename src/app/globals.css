@@ -7,14 +7,15 @@
   --font-figtree: "Figtree", sans-serif;
   --font-mono:    "JetBrains Mono", monospace;
 
-  --color-bg:      #f5f0e8;
-  --color-bg2:     #ede8df;
-  --color-surface: #e8e1d6;
-  --color-border:  #d4c9b8;
-  --color-accent:  #c44b00;
+  --color-bg:      #f0e6d4;
+  --color-bg2:     #ede3d0;
+  --color-surface: #e5d8c4;
+  --color-border:  #d6c8b0;
+  --color-accent:  #ea5a0f;
   --color-muted:   #8a7560;
-  --color-bright:  #1a1208;
+  --color-bright:  #1e1408;
   --color-text:    #2e2416;
+
 }
 
 :root {

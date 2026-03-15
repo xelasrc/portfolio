@@ -1,7 +1,6 @@
 export default function Experience() {
   return (
     <section id="experience" className="max-w-6xl mx-auto px-14 py-24 border-t border-border">
-      <p className="font-mono text-accent text-xs tracking-widest mb-2">// 03. Experience</p>
       <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-10">Where I've worked</h2>
       <div className="max-w-2xl">
         <p className="font-mono text-accent text-xs tracking-widest mb-1">Nov 2025 — Feb 2026</p>

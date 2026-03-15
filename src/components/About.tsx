@@ -1,7 +1,6 @@
 export default function About() {
   return (
     <section id="about" className="max-w-6xl mx-auto px-14 py-24">
-      <p className="font-mono text-accent text-xs tracking-widest mb-2">// 01. About</p>
       <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-10">Who I am</h2>
       <div className="max-w-2xl flex flex-col gap-5 text-muted leading-relaxed">
         <p>I'm a Software Engineering graduate from Victoria University of Wellington, specialising in AI, with real industry experience delivering AI systems that people actually use.</p>

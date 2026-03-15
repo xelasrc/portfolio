@@ -10,7 +10,6 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="max-w-6xl mx-auto px-14 py-24 border-t border-border">
-      <p className="font-mono text-accent text-xs tracking-widest mb-2">// 02. Skills</p>
       <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-10">Technical toolkit</h2>
       <div className="grid grid-cols-3 gap-5">
         {skills.map((cat) => (
