@@ -5,8 +5,12 @@ export default function Navbar() {
       <ul className="flex gap-8 list-none">
         {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
           <li key={item}>
-            <a href={`#${item.toLowerCase()}`} className="font-mono text-muted text-xs tracking-widest uppercase hover:text-accent transition-colors">
+            <a
+              href={`#${item.toLowerCase()}`}
+              className="relative font-mono text-muted text-xs tracking-widest uppercase transition-colors duration-200 hover:text-accent group"
+            >
               {item}
+              <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-accent transition-all duration-300 group-hover:w-full" />
             </a>
           </li>
         ))}
