@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section id="contact" className="max-w-6xl mx-auto px-14 py-24 border-t border-border">
       <Reveal>
-        <p className="font-mono text-accent text-xs tracking-widest mb-2">// 05. Contact</p>
+        <p className="font-mono text-accent text-xs tracking-widest mb-2">// 06. Contact</p>
         <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-3">Get in touch</h2>
         <p className="text-muted mb-10">2026 Graduate · Actively looking for graduate roles in Australia.</p>
       </Reveal>
