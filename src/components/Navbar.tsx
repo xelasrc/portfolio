@@ -10,7 +10,9 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-bg border-b border-border">
       <div className="flex justify-between items-center px-6 md:px-14 py-5">
-        <a href="#" className="font-syne font-extrabold text-accent text-lg">AW</a>
+        <a href="#" className="flex items-center">
+          <img src="/apple-touch-icon2.png" alt="AW" className="h-12 w-12" />
+        </a>
 
         {/* desktop links */}
         <ul className="hidden md:flex gap-8 list-none">
