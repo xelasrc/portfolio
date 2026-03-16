@@ -9,13 +9,19 @@ export default function About() {
       </Reveal>
       <div className="max-w-2xl flex flex-col gap-5 text-muted leading-relaxed">
         <Reveal delay={0.1}>
-          <p>I'm a final-year Software Engineering student at Victoria University of Wellington, specialising in AI, with real industry experience delivering AI systems that people actually use.</p>
+          <p>
+            I'm a software engineer based in New Zealand, recently graduated with a Bachelor of Engineering (Hons) in Software with an AI specialisation from Victoria University of Wellington.
+          </p>
         </Reveal>
         <Reveal delay={0.2}>
-          <p>At Methanex NZ, I designed and deployed a pilot AI-driven Risk-Based Inspection system across multiple production sites, and built an internal chatbot using Azure OpenAI for natural language querying of engineering data.</p>
+          <p>
+            I have a genuine interest in AI and ML. I enjoy keeping up with the latest research, experimenting with new tools and models, and building projects in my own time just to explore what's possible.
+          </p>
         </Reveal>
         <Reveal delay={0.3}>
-          <p>I'm most at home working on backend systems, data pipelines, and applied ML. Graduating May 2026 and actively looking for graduate software engineering roles in Australia.</p>
+          <p>
+            I'm actively looking for graduate software / AI engineering roles and open to opportunities anywhere. Relocation isn't a problem, and if you think I could be a good fit for your team, I'd love to hear from you.
+          </p>
         </Reveal>
       </div>
     </section>

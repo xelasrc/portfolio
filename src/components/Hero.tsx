@@ -22,9 +22,8 @@ export default function Hero() {
         </motion.p>
 
         <motion.p variants={fadeUp} className="text-muted text-base md:text-lg leading-relaxed max-w-lg mb-12">
-          Building AI-driven solutions at the intersection of backend engineering,
-          data pipelines, and applied machine learning. Based in NZ, seeking roles
-          in Australia.
+          Fresh software engineering graduate with real-world AI experience and a genuine passion for the space. 
+          I build things in my own time because I actually enjoy it.
         </motion.p>
       </motion.div>
 

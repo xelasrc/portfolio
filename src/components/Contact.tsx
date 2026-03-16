@@ -6,7 +6,7 @@ export default function Contact() {
       <Reveal>
         <p className="font-mono text-accent text-xs tracking-widest mb-2">// 06. Contact</p>
         <h2 className="font-syne font-bold text-bright text-3xl md:text-4xl tracking-tight mb-3">Get in touch</h2>
-        <p className="text-muted mb-10">Graduating May 2026 · Actively looking for graduate roles in Australia.</p>
+        <p className="text-muted mb-10">Graduating May 2026 · Actively looking for graduate opportunities.</p>
       </Reveal>
       <div className="flex flex-col gap-3 max-w-sm">
         <Reveal delay={0}>

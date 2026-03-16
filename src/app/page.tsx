@@ -32,9 +32,9 @@ export default function Home() {
       <main className="relative z-10">
         <Hero />
         <About />
-        <Skills />
         <Experience />
         <Projects />
+        <Skills />
         <AskAlex />
         <Contact />
       </main>

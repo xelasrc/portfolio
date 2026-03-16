@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <section id="projects" className="max-w-6xl mx-auto px-6 md:px-14 py-24 border-t border-border">
       <Reveal>
-        <p className="font-mono text-accent text-xs tracking-widest mb-2">// 04. Projects</p>
+        <p className="font-mono text-accent text-xs tracking-widest mb-2">// 03. Projects</p>
         <h2 className="font-syne font-bold text-bright text-3xl md:text-4xl tracking-tight mb-10">Things I've built</h2>
       </Reveal>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

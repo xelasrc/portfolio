@@ -80,12 +80,12 @@ export default function AskAlex() {
 
           {/* header */}
           <div className="flex items-center gap-3 px-6 py-4 border-b border-border">
-            <div className="w-9 h-9 bg-accent flex items-center justify-center font-syne font-extrabold text-bg text-sm shrink-0">
-              AW
+            <div className="w-9 h-9 shrink-0">
+              <img src="/apple-touch-icon.png" alt="AW" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="font-syne font-bold text-bright text-sm">Alex Wells</p>
-              <p className="font-mono text-muted text-xs">Software Engineer · Focused on AI & ML</p>
+              <p className="font-mono text-muted text-xs">Software Engineer</p>
             </div>
             <div className="ml-auto w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_#4ade80]" />
           </div>
@@ -107,8 +107,12 @@ export default function AskAlex() {
           <div ref={msgsRef} className="h-80 overflow-y-auto px-6 py-4 flex flex-col gap-4">
             {messages.map((msg, i) => (
               <div key={i} className={`flex gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}>
-                <div className={`w-7 h-7 flex items-center justify-center font-syne font-bold text-xs shrink-0 self-end ${msg.role === "assistant" ? "bg-accent text-bg" : "bg-border text-muted"}`}>
-                  {msg.role === "assistant" ? "AW" : "You"}
+                <div className={`w-7 h-7 shrink-0 self-end ${msg.role === "assistant" ? "" : "bg-border flex items-center justify-center font-syne font-bold text-xs text-muted"}`}>
+                  {msg.role === "assistant" ? (
+                    <img src="/apple-touch-icon.png" alt="AW" className="w-full h-full object-cover" />
+                  ) : (
+                    "You"
+                  )}
                 </div>
                 <div className={`px-4 py-3 text-sm leading-relaxed max-w-sm ${msg.role === "assistant" ? "bg-bg border border-border text-text" : "bg-accent/10 border border-accent/20 text-bright"}`}>
                   {msg.content}
@@ -118,8 +122,8 @@ export default function AskAlex() {
 
             {loading && (
               <div className="flex gap-3">
-                <div className="w-7 h-7 bg-accent flex items-center justify-center font-syne font-bold text-xs text-bg shrink-0 self-end">
-                  AW
+                <div className="w-7 h-7 shrink-0 self-end">
+                  <img src="/apple-touch-icon.png" alt="AW" className="w-full h-full object-cover" />
                 </div>
                 <div className="px-4 py-3 bg-bg border border-border flex gap-1.5 items-center">
                   <span className="w-1.5 h-1.5 bg-muted rounded-full animate-bounce [animation-delay:0ms]" />
