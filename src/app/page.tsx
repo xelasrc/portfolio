@@ -25,7 +25,7 @@ export default function Home() {
       {/* blur strip over content */}
       <div
         className="fixed top-0 left-1/2 -translate-x-1/2 h-full w-full max-w-6xl pointer-events-none z-1"
-        style={{ backdropFilter: "blur(2px)" }}
+        style={{ backdropFilter: "blur(2.5px)" }}
       />
 
       <Navbar />
