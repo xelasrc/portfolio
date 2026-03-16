@@ -1,12 +1,13 @@
 import Reveal from "@/components/Reveal";
+import { Code2, Layers, Brain, Wrench, GitBranch, Sparkles } from "lucide-react";
 
 const skills = [
-  { category: "Languages", items: ["Python", "TypeScript", "Java", "JavaScript", "SQL"] },
-  { category: "Frameworks", items: ["React Native", "FastAPI", "Next.js", "Node.js"] },
-  { category: "AI & Data", items: ["OpenAI API", "Azure OpenAI", "LLM Integration", "Data Pipelines", "ML Modelling"] },
-  { category: "Tools", items: ["Firebase", "Azure", "GitLab", "GitHub", "Vercel"] },
-  { category: "Practices", items: ["Agile / Scrum", "REST APIs", "Code Review", "Data Modelling"] },
-  { category: "Learning", items: ["RAG Systems", "Vector DBs", "LangChain", "AI Agents"] },
+  { category: "Languages", icon: Code2, items: ["Python", "TypeScript", "Java", "JavaScript", "SQL"] },
+  { category: "Frameworks", icon: Layers, items: ["React Native", "FastAPI", "Next.js", "Node.js"] },
+  { category: "AI & Data", icon: Brain, items: ["OpenAI API", "Azure OpenAI", "LLM Integration", "Data Pipelines", "ML Modelling"] },
+  { category: "Tools", icon: Wrench, items: ["Firebase", "Azure", "GitLab", "GitHub", "Vercel"] },
+  { category: "Practices", icon: GitBranch, items: ["Agile / Scrum", "REST APIs", "Code Review", "Data Modelling"] },
+  { category: "Learning", icon: Sparkles, items: ["RAG Systems", "Vector DBs", "LangChain", "AI Agents"] },
 ];
 
 export default function Skills() {
@@ -17,23 +18,26 @@ export default function Skills() {
         <h2 className="font-syne font-bold text-bright text-3xl md:text-4xl tracking-tight mb-10">Technical toolkit</h2>
       </Reveal>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {skills.map((cat, i) => (
-          <Reveal key={cat.category} delay={i * 0.1}>
-            <div className="bg-surface border border-border p-6 h-full transition-colors duration-300 hover:border-accent/30">
-              <p className="font-mono text-accent text-xs tracking-widest uppercase mb-4">{cat.category}</p>
-              <div className="flex flex-wrap gap-2">
-                {cat.items.map((item) => (
-                  <span 
-                    key={item} 
-                    className="px-3 py-1 border border-border text-muted text-sm"
-                  >
-                    {item}
-                  </span>
-                ))}
+        {skills.map((cat, i) => {
+          const Icon = cat.icon;
+          return (
+            <Reveal key={cat.category} delay={i * 0.1}>
+              <div className="bg-surface border border-border p-6 h-full transition-colors duration-300 hover:border-accent/30">
+                <div className="flex items-center gap-2 mb-4">
+                  <Icon size={14} className="text-accent opacity-70" />
+                  <p className="font-mono text-accent text-xs tracking-widest uppercase">{cat.category}</p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {cat.items.map((item) => (
+                    <span key={item} className="px-3 py-1 border border-border text-muted text-sm">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
     </section>
   );

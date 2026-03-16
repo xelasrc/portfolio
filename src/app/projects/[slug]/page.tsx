@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import projects from "@/data/projects";
 import Link from "next/link";
+import { ArrowLeft, Github } from "lucide-react";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -11,6 +12,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) notFound();
+
+  const StatusIcon = project.statusIcon;
 
   return (
     <main className="relative min-h-screen px-6 md:px-14 max-w-6xl mx-auto py-32">
@@ -28,12 +31,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <div className="relative z-10">
         <Link
           href="/#projects"
-          className="font-mono text-muted text-xs tracking-widest uppercase hover:text-accent transition-colors mb-12 inline-block"
+          className="flex items-center gap-2 font-mono text-muted text-xs tracking-widest uppercase hover:text-accent transition-colors mb-12 w-fit"
         >
-          ← Back to projects
+          <ArrowLeft size={13} />
+          Back to projects
         </Link>
 
-        <p className="font-mono text-accent text-xs tracking-widest mb-3">{project.status}</p>
+        <div className="flex items-center gap-2 mb-3">
+          <StatusIcon size={13} className="text-accent" />
+          <p className="font-mono text-accent text-xs tracking-widest">{project.status}</p>
+        </div>
 
         <h1
           className="font-syne font-extrabold text-bright tracking-tight mb-6"
@@ -58,9 +65,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <p className="font-mono text-muted text-xs tracking-widest uppercase mb-4">More details coming soon</p>
           <a
             href={project.github}
-            className="font-mono text-accent text-sm hover:text-bright transition-colors"
+            className="flex items-center gap-2 font-mono text-accent text-sm hover:text-bright transition-colors w-fit"
           >
-            View on GitHub ↗
+            <Github size={14} />
+            View on GitHub
           </a>
         </div>
       </div>

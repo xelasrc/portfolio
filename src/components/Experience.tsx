@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import { Calendar, MapPin } from "lucide-react";
 
 const bullets = [
   "Designed and built a pilot AI-driven Risk-Based Inspection (RBI) system to evaluate and prioritise industrial assets across multiple production sites.",
@@ -16,9 +17,15 @@ export default function Experience() {
       </Reveal>
       <div className="max-w-2xl">
         <Reveal delay={0.1}>
-          <p className="font-mono text-accent text-xs tracking-widest mb-1">Nov 2025 — Feb 2026</p>
+          <div className="flex items-center gap-2 text-accent font-mono text-xs tracking-widest mb-1">
+            <Calendar size={12} />
+            Nov 2025 — Feb 2026
+          </div>
           <h3 className="font-syne font-bold text-bright text-xl mb-1">Data Science & Analytics Intern</h3>
-          <p className="text-muted text-sm mb-5">Methanex NZ · New Plymouth, New Zealand</p>
+          <div className="flex items-center gap-2 text-muted text-sm mb-5">
+            <MapPin size={12} />
+            Methanex NZ · New Plymouth, New Zealand
+          </div>
         </Reveal>
         <ul className="flex flex-col gap-3">
           {bullets.map((point, i) => (

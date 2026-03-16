@@ -1,10 +1,30 @@
 import Reveal from "@/components/Reveal";
+import { Mail, Linkedin, Github, FileDown } from "lucide-react";
 
 const links = [
-  { label: "amwells2003@gmail.com", href: "mailto:amwells2003@gmail.com" },
-  { label: "LinkedIn ↗", href: "https://linkedin.com/in/alexander-wells-b0a5aa309", target: "_blank" },
-  { label: "github.com/xelasrc ↗", href: "https://github.com/xelasrc", target: "_blank" },
-  { label: "Download CV ↓", href: "/CV_AW.pdf", download: "Alexander_Wells_CV.pdf" },
+  {
+    label: "amwells2003@gmail.com",
+    href: "mailto:amwells2003@gmail.com",
+    icon: Mail,
+  },
+  {
+    label: "LinkedIn ↗",
+    href: "https://linkedin.com/in/alexander-wells-b0a5aa309",
+    target: "_blank",
+    icon: Linkedin,
+  },
+  {
+    label: "github.com/xelasrc ↗",
+    href: "https://github.com/xelasrc",
+    target: "_blank",
+    icon: Github,
+  },
+  {
+    label: "Download CV ↓",
+    href: "/CV_AW.pdf",
+    download: "Alexander_Wells_CV.pdf",
+    icon: FileDown,
+  },
 ];
 
 export default function Contact() {
@@ -17,19 +37,22 @@ export default function Contact() {
       </Reveal>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg">
-        {links.map((link, i) => (
-          <Reveal key={link.label} delay={i * 0.1}>
-            <a
-              href={link.href}
-              target={link.target}
-              download={link.download}
-              className="flex items-center gap-3 p-4 border border-border hover:border-accent hover:text-accent text-bright transition-all duration-200 group"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shrink-0" />
-              <span className="font-mono text-xs tracking-wide">{link.label}</span>
-            </a>
-          </Reveal>
-        ))}
+        {links.map((link, i) => {
+          const Icon = link.icon;
+          return (
+            <Reveal key={link.label} delay={i * 0.1}>
+              <a
+                href={link.href}
+                target={link.target}
+                download={link.download}
+                className="flex items-center gap-3 p-4 border border-border hover:border-accent hover:text-accent text-bright transition-all duration-200 group"
+              >
+                <Icon size={16} className="text-accent opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
+                <span className="font-mono text-xs tracking-wide">{link.label}</span>
+              </a>
+            </Reveal>
+          );
+        })}
       </div>
 
       <Reveal delay={0.5}>
