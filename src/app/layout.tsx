@@ -22,8 +22,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Alexander Wells — Software Engineer",
-  description:
-    "Graduate software engineer specialising in AI, backend development and data engineering. Based in NZ, seeking roles in Australia.",
+  description: 
+    "Graduate software engineer specialising in AI & ML. Based in NZ, open to opportunities worldwide.",
   metadataBase: new URL("https://alexanderwells.dev"),
   icons: {
     icon: "/favicon.ico",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alexander Wells — Software Engineer",
     description:
-      "Graduate software engineer specialising in AI, backend development and data engineering. Based in NZ, seeking roles in Australia.",
+      "Graduate software engineer specialising in AI & ML. Based in NZ, open to opportunities worldwide.",
     url: "https://alexanderwells.dev",
     siteName: "Alexander Wells",
   },

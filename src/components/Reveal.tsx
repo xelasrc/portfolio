@@ -18,7 +18,8 @@ export default function Reveal({
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.1 }}
+      exit="hidden"
+      viewport={{ once: false, amount: 0.1 }}
       transition={{ delay, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
