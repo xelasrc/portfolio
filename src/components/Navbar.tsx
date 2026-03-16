@@ -1,11 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const links = ["About", "Experience", "Projects", "Skills", "Ask Alex", "Contact"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY < 100) {
+        setActive("");
+        return;
+      }
+
+      let closest = "";
+      let closestDistance = Infinity;
+
+      links.forEach((item) => {
+        const id = item.toLowerCase().replace(" ", "-");
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        const rect = el.getBoundingClientRect();
+        const distance = Math.abs(rect.top - window.innerHeight / 4);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closest = item;
+        }
+      });
+
+      setActive(closest);
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-bg border-b border-border">
@@ -20,10 +53,14 @@ export default function Navbar() {
             <li key={item}>
               <a
                 href={`#${item.toLowerCase().replace(" ", "-")}`}
-                className="relative font-mono text-muted text-xs tracking-widest uppercase transition-colors duration-200 hover:text-accent group"
+                className={`relative font-mono text-xs tracking-widest uppercase transition-colors duration-200 hover:text-accent group ${
+                  active === item ? "text-accent" : "text-muted"
+                }`}
               >
                 {item}
-                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-accent transition-all duration-300 group-hover:w-full" />
+                <span className={`absolute -bottom-0.5 left-0 h-px bg-accent transition-all duration-300 ${
+                  active === item ? "w-full" : "w-0 group-hover:w-full"
+                }`} />
               </a>
             </li>
           ))}
@@ -48,7 +85,9 @@ export default function Navbar() {
               <a
                 href={`#${item.toLowerCase().replace(" ", "-")}`}
                 onClick={() => setOpen(false)}
-                className="block px-6 py-4 font-mono text-muted text-xs tracking-widest uppercase border-b border-border hover:text-accent transition-colors"
+                className={`block px-6 py-4 font-mono text-xs tracking-widest uppercase border-b border-border transition-colors ${
+                  active === item ? "text-accent" : "text-muted hover:text-accent"
+                }`}
               >
                 {item}
               </a>
