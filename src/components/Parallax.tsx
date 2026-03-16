@@ -33,7 +33,7 @@ function generateShapes(count: number, canvasWidth: number): Shape[] {
     const size = 30 + Math.random() * 60;
     return {
       x: size / 2 + Math.random() * (canvasWidth - size),
-      y: (i / count) * 12000,
+      y: (i / count) * 8000,
       size,
       speed: 0.2 + Math.random() * 0.5,
       color,
