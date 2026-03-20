@@ -52,7 +52,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </h1>
 
         {/* Stack tags */}
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-12">
           {project.stack.map((tag) => (
             <span key={tag} className="px-3 py-1 border border-border text-accent font-mono text-xs">
               {tag}
@@ -61,9 +61,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
 
         {/* Description */}
-        <p className="text-muted text-lg leading-relaxed max-w-2xl mb-16">
+        <p className="text-muted text-lg leading-relaxed max-w-2xl mb-6">
           {project.longDescription ?? project.description}
         </p>
+
+        {/* Note */}
+        {project.note && (
+          <p className="font-mono text-xs text-muted border-l-2 border-accent pl-4 mb-16 max-w-xl">
+            {project.note}
+          </p>
+        )}
 
         {/* Screenshots */}
         {project.screenshots && project.screenshots.length > 0 && (
@@ -103,40 +110,39 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* No detail fallback */}
         {!project.features && !project.screenshots && (
-          <div className="border-t border-border pt-10 mt-4">
+          <div className="border-t border-border pt-10 mt-4 mb-16">
             <p className="font-mono text-muted text-xs tracking-widest uppercase">
               More details coming soon
             </p>
           </div>
         )}
 
-        {/* Footer links */}
-        {(project.liveUrl || (project.github && project.github !== "#")) && (
-          <div className="border-t border-border pt-10 mt-10 flex flex-wrap gap-6">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 font-mono text-accent text-sm hover:text-bright transition-colors"
-              >
-                <ExternalLink size={14} />
-                {project.liveUrl.replace("https://", "")}
-              </a>
-            )}
-            {project.github && project.github !== "#" && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 font-mono text-accent text-sm hover:text-bright transition-colors"
-              >
-                <Github size={14} />
-                GitHub Repository
-              </a>
-            )}
-          </div>
-        )}
+        {/* Links */}
+        <div className="border-t border-border pt-10 flex flex-wrap gap-4">
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 border border-accent text-accent font-mono text-xs tracking-widest uppercase hover:bg-accent hover:text-bg transition-all"
+            >
+              <ExternalLink size={12} />
+              Live Site
+            </a>
+          )}
+          {project.github && project.github !== "#" && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 border border-border text-muted font-mono text-xs tracking-widest uppercase hover:text-bright hover:border-bright transition-all"
+            >
+              <Github size={12} />
+              View on GitHub
+            </a>
+          )}
+        </div>
+
       </div>
     </main>
   );

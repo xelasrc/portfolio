@@ -11,6 +11,7 @@ export type Project = {
   github: string;
   liveUrl?: string;
   longDescription?: string;
+  note?: string;
   features?: string[];
   screenshots?: { src: string; caption: string }[];
 };
@@ -36,6 +37,7 @@ const projects: Project[] = [
     github: "https://github.com/xelasrc/deasil",
     liveUrl: "https://deasil.vercel.app",
     longDescription: "Deasil is a daily news puzzle game inspired by Wordle and Catfishing. Every day, 10 new puzzles are automatically generated from real trending headlines using the Claude AI API and NewsAPI. Players guess the topic from a set of category-style clues, earning points based on how few attempts they need. The game features a calendar archive, streak tracking, fuzzy answer matching, and a fully automated daily pipeline.",
+    note: "Deasil is an archaic English word meaning 'clockwise' or 'in the direction of the sun' — a nod to the daily, time-driven nature of the game.",
     features: [
       "10 AI-generated puzzles per day from real news headlines",
       "Automated daily generation via GitHub Actions cron job",
@@ -53,6 +55,7 @@ const projects: Project[] = [
       { src: "/screenshots/deasil-archive.png", caption: "Calendar archive" },
     ],
   },
+
   {
     slug: "ai-gym-mobile-app",
     title: "AI Gym Mobile App",
