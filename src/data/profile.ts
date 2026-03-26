@@ -27,7 +27,7 @@ ${p.features?.map((f) => `- ${f}`).join("\n") || ""}${p.note ? `\n\n${p.note}` :
 }
 
 const profile = `
-NAME: Alexander Wells
+NAME: Alexander Wells (22)
 
 CONTACT: 
 - Email: amwells2003@gmail.com
@@ -66,6 +66,9 @@ Tools: Git, Clerk (auth), REST APIs
 
 CURRENTLY LEARNING:
 Advanced RAG architectures, LangChain, AI agents, vector database optimization
+
+PERSONAL INTERESTS:
+Outside of tech, I'm into fitness (regular gym-goer), music (been playing drums since I was young, currently learning guitar, and I make beats on my laptop), and quiz nights with friends. I also stay current with AI advancements - following new model releases, research papers, and industry developments.
 
 WHAT I'M PASSIONATE ABOUT:
 - Building AI-powered products that actually solve real problems
