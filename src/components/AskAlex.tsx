@@ -71,7 +71,7 @@ export default function AskAlex() {
         <p className="font-mono text-accent text-xs tracking-widest mb-2">// 05. Ask Alex</p>
         <h2 className="font-syne font-bold text-bright text-4xl tracking-tight mb-3">Ask Alex anything</h2>
         <p className="text-muted mb-10 max-w-lg">
-          Powered by Claude AI. Ask about my experience, projects, availability, or anything on my CV.
+          Ask about my experience, projects, availability, or anything on my CV.
         </p>
       </Reveal>
 
