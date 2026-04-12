@@ -10,17 +10,17 @@ export default function About() {
       <div className="max-w-2xl flex flex-col gap-5 text-muted leading-relaxed">
         <Reveal delay={0.1}>
           <p>
-            I'm a software engineer based in New Zealand, recently graduated with a Bachelor of Engineering (Hons) in Software with an AI specialisation from Victoria University of Wellington.
+            I&apos;m a software engineer based in New Zealand, recently graduated with a Bachelor of Engineering (Hons) in Software with an AI specialisation from Victoria University of Wellington.
           </p>
         </Reveal>
         <Reveal delay={0.2}>
           <p>
-            I have a genuine interest in AI and ML. I enjoy keeping up with the latest research, experimenting with new tools and models, and building projects in my own time just to explore what's possible.
+            I have a genuine interest in AI and ML. I enjoy keeping up with the latest research, experimenting with new tools and models, and building projects in my own time just to explore what&apos;s possible.
           </p>
         </Reveal>
         <Reveal delay={0.3}>
           <p>
-            I'm actively looking for graduate software / AI engineering roles and open to opportunities anywhere. Relocation isn't a problem, and if you think I could be a good fit for your team, I'd love to hear from you.
+            I&apos;m actively looking for graduate software / AI engineering roles and open to opportunities anywhere. Relocation isn&apos;t a problem, and if you think I could be a good fit for your team, I&apos;d love to hear from you.
           </p>
         </Reveal>
       </div>

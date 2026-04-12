@@ -13,7 +13,7 @@ export default function Experience() {
     <section id="experience" className="max-w-6xl mx-auto px-6 md:px-14 py-24 border-t border-border">
       <Reveal>
         <p className="font-mono text-accent text-xs tracking-widest mb-2">// 02. Experience</p>
-        <h2 className="font-syne font-bold text-bright text-3xl md:text-4xl tracking-tight mb-10">Where I've worked</h2>
+        <h2 className="font-syne font-bold text-bright text-3xl md:text-4xl tracking-tight mb-10">Where I&apos;ve worked</h2>
       </Reveal>
       <div className="max-w-2xl">
         <Reveal delay={0.1}>

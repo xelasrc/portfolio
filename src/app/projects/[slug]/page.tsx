@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import projects from "@/data/projects";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Github, ExternalLink } from "lucide-react";
 
 export function generateStaticParams() {
@@ -79,10 +80,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {project.screenshots.map((s) => (
                 <div key={s.src} className="border border-border overflow-hidden">
-                  <img
+                  <Image
                     src={s.src}
                     alt={s.caption}
-                    className="w-full object-cover"
+                    width={1200}
+                    height={800}
+                    className="w-full h-auto object-cover"
                   />
                   <p className="font-mono text-muted text-xs px-4 py-2 border-t border-border">
                     {s.caption}

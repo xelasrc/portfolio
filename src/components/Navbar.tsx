@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const links = ["About", "Experience", "Projects", "Skills", "Ask Alex", "Contact"];
 
@@ -44,7 +45,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-bg border-b border-border">
       <div className="flex justify-between items-center px-6 md:px-14 py-1">
         <a href="#" className="flex items-center">
-          <img src="/apple-touch-icon2.png" alt="AW" className="h-10 w-10 md:h-15 md:w-15" />
+          <Image src="/apple-touch-icon2.png" alt="AW" width={60} height={60} className="h-10 w-10 md:h-15 md:w-15" />
         </a>
 
         {/* desktop links */}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, Figtree, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const syne = Syne({
   subsets: ["latin"],
@@ -49,6 +50,7 @@ export default function RootLayout({
         className={`${syne.variable} ${figtree.variable} ${jetbrainsMono.variable} font-figtree`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

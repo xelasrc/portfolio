@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 type Message = {
@@ -24,8 +25,6 @@ export default function AskAlex() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
-
   const isFirstRender = useRef(true);
 
   const msgsRef = useRef<HTMLDivElement>(null);
@@ -81,7 +80,7 @@ export default function AskAlex() {
           {/* header */}
           <div className="flex items-center gap-3 px-6 py-4 border-b border-border">
             <div className="w-9 h-9 shrink-0">
-              <img src="/apple-touch-icon.png" alt="AW" className="w-full h-full object-cover" />
+              <Image src="/apple-touch-icon.png" alt="AW" width={36} height={36} className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="font-syne font-bold text-bright text-sm">Alex Wells</p>
@@ -109,7 +108,7 @@ export default function AskAlex() {
               <div key={i} className={`flex gap-3 ${msg.role === "user" ? "flex-row-reverse" : ""}`}>
                 <div className={`w-7 h-7 shrink-0 self-end ${msg.role === "assistant" ? "" : "bg-border flex items-center justify-center font-syne font-bold text-xs text-muted"}`}>
                   {msg.role === "assistant" ? (
-                    <img src="/apple-touch-icon.png" alt="AW" className="w-full h-full object-cover" />
+                    <Image src="/apple-touch-icon.png" alt="AW" width={28} height={28} className="w-full h-full object-cover" />
                   ) : (
                     "You"
                   )}
@@ -123,7 +122,7 @@ export default function AskAlex() {
             {loading && (
               <div className="flex gap-3">
                 <div className="w-7 h-7 shrink-0 self-end">
-                  <img src="/apple-touch-icon.png" alt="AW" className="w-full h-full object-cover" />
+                  <Image src="/apple-touch-icon.png" alt="AW" width={28} height={28} className="w-full h-full object-cover" />
                 </div>
                 <div className="px-4 py-3 bg-bg border border-border flex gap-1.5 items-center">
                   <span className="w-1.5 h-1.5 bg-muted rounded-full animate-bounce [animation-delay:0ms]" />
