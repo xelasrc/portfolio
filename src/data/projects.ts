@@ -19,15 +19,6 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    slug: "ai-interview-simulator",
-    title: "AI Interview Simulator",
-    status: "In Progress",
-    statusIcon: Clock,
-    description: "A web app where users upload their CV and job description, go through a simulated AI interview, and receive evaluations on their responses.",
-    stack: ["Python", "FastAPI", "React", "LLM"],
-    github: "https://github.com/xelasrc/ai-interview-simulator.git",
-  },
-  {
     slug: "rhizome",
     title: "Rhizome",
     status: "Shipped",
