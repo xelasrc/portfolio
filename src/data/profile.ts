@@ -85,10 +85,10 @@ WORK AUTHORIZATION: New Zealand citizen (can work in Australia without visa spon
 
 WHY HIRE ME:
 - Real production AI experience from Methanex internship, not just academic projects
-- Shipped multiple live projects (Deasil is playable right now, Rhizome runs 24/7 on my Pi)
+- Shipped multiple live projects
 - Self-directed learner who builds things independently
 - Comfortable across the full stack but especially strong with AI/ML integration
-- Ready to start immediately and hit the ground running
+- Ready to start immediately
 `;
 
 export default profile;
